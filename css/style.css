@@ -262,7 +262,7 @@
 
 .service-carousel .owl-dots {
     margin-top: 24px;
-    display: flex;
+    display: none;
     align-items: flex-end;
     justify-content: center;
 }

@@ -3,10 +3,14 @@
 <html lang="en">
 <head>
 <meta charset="utf-8"/>
-<title id="contact_page_title">Contact | Pro Plumber Winchester</title>
+<title id="page_title">
+   FAQS | Pro Plumber Winchester
+  </title>
 <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
-<meta content="Emergency Plumber in Winchester, KY | Pro Plumber Winchester" id="contact_meta_emergency_title" name="keywords"/>
-<meta content="Experienced and reliable plumber in Winchester, KY, offering top-quality services for all your plumbing needs. From leak repairs and drain cleaning to water heater installation, trust our skilled team for prompt and professional solutions. Available 24/7 to ensure your home stays in perfect working order. Contact us today for a free estimate and discover exceptional service you can rely on." id="contact_meta_description" name="description"/>
+<meta content="Emergency Plumber in Winchester, KY" id="meta_emergency_title" name="keywords"/>
+<meta content="Experienced and reliable plumber in Winchester, KY, offering top-quality services for all your plumbing needs. From leak repairs and drain cleaning to water heater installation, trust our skilled team for prompt and professional solutions. Available 24/7 to ensure your home stays in perfect working order. Contact us today for a free estimate and discover exceptional service you can rely on." id="meta_description" name="description"/>
+<!-- Favicon -->
+<link href="img/favicon.ico" rel="icon"/>
 <!-- Google Web Fonts -->
 <link href="https://fonts.googleapis.com" rel="preconnect"/>
 <link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
@@ -25,134 +29,134 @@
 <!-- Template Stylesheet -->
 <link href="css/style.css" rel="stylesheet"/>
 <style>
-        /* General reset */
-        body {
-            margin: 0;
-            padding: 0;
-            font-family: Arial, sans-serif;
-        }
+      /* General reset */
+    body {
+        margin: 0;
+        padding: 0;
+        font-family: Arial, sans-serif;
+    }
 
-        /* Floating full-width button */
+    /* Floating full-width button */
+    .call-now-button {
+        position: fixed;
+        bottom: 0;
+        left: 0;
+        width: 100%;
+        background-color: #28a745;
+        color: white;
+        font-size: 18px;
+        font-weight: bold;
+        text-align: center;
+        padding: 15px 0;
+        border: none;
+        border-radius: 15px 15px 0 0;
+        text-decoration: none;
+        box-shadow: 0 -4px 6px rgba(0, 0, 0, 0.2);
+        z-index: 1000;
+        transition: background-color 0.3s ease;
+    }
+
+    /* Hover effect */
+    .call-now-button:hover {
+        background-color: #218838;
+    }
+
+    /* Active (clicked) state */
+    .call-now-button:active {
+        background-color: #1e7e34;
+    }
+
+    /* Prevent blue text after click */
+    .call-now-button:visited {
+        color: white;
+    }
+
+    /* Ensure the button is mobile-friendly */
+    @media (min-width: 768px) {
         .call-now-button {
-            position: fixed;
-            bottom: 0;
-            left: 0;
-            width: 100%;
-            background-color: #28a745;
-            color: white;
-            font-size: 18px;
+            display: none;
+        }
+    }
+
+    /* Desktop Dropdown Styles */
+    @media screen and (min-width: 1024px) {
+
+        /* Ensure sub-menus only appear when hovering over the parent item */
+        #service_dropdown .dropdown:hover>.dropdown-menu,
+        #serviceArea_dropdown .dropdown:hover>.dropdown-menu {
+            display: block;
+        }
+
+        /* Standard styling for dropdown submenus */
+        #service_dropdown .dropdown-menu.dropdown-submenu,
+        #serviceArea_dropdown .dropdown-menu.dropdown-submenu {
+            top: -5px;
+            left: 90%;
+            margin-left: 0.1rem;
+            display: none;
+            position: absolute;
+        }
+
+        /* General dropdown menu transitions */
+        #service_dropdown .dropdown-menu,
+        #serviceArea_dropdown .dropdown-menu {
+            display: none;
+            transition: all 0.3s ease-in-out;
+            z-index: 1050;
+        }
+
+        /* Optional: Add delay for opening and closing the menu */
+        #service_dropdown:hover>.dropdown-menu,
+        #serviceArea_dropdown:hover>.dropdown-menu,
+        .dropdown-item.dropdown:hover>.dropdown-menu,
+        #service_dropdown,
+        #serviceArea_dropdown,
+        .dropdown-item.dropdown {
+            transition-delay: 0.2s;
+        }
+    }
+
+    /* Mobile Menu Styling */
+    @media (max-width: 768px) {
+
+        #mobileServiceDropdown .nav-link,
+        #mobileServiceAreaDropdown .nav-link {
+            padding-left: 20px;
+        }
+
+        /* Submenu indentation for mobile */
+        .ms-3 {
+            padding-left: 30px;
+        }
+
+        .nav-item.nav-link {
+            font-size: 1rem;
+        }
+
+        /* Custom styling for dropdown toggle on mobile */
+        #mobileServicesMenu .nav-item.nav-link,
+        #mobileServiceAreaMenu .nav-item.nav-link {
             font-weight: bold;
-            text-align: center;
-            padding: 15px 0;
-            border: none;
-            border-radius: 15px 15px 0 0;
-            text-decoration: none;
-            box-shadow: 0 -4px 6px rgba(0, 0, 0, 0.2);
-            z-index: 1000;
-            transition: background-color 0.3s ease;
         }
 
-        /* Hover effect */
-        .call-now-button:hover {
-            background-color: #218838;
+        /* Ensure collapsed submenus are hidden on mobile until toggled */
+        #mobileServiceDropdown .collapse,
+        #mobileServiceAreaDropdown .collapse {
+            display: none;
         }
 
-        /* Active (clicked) state */
-        .call-now-button:active {
-            background-color: #1e7e34;
+        #mobileServiceDropdown .collapse.show,
+        #mobileServiceAreaDropdown .collapse.show {
+            display: block;
         }
 
-        /* Prevent blue text after click */
-        .call-now-button:visited {
-            color: white;
+        /* Hide parent dropdowns on mobile */
+        #parentServiceDropdown,
+        #parentServiceAreaDropdown {
+            display: none;
         }
-
-        /* Ensure the button is mobile-friendly */
-        @media (min-width: 768px) {
-            .call-now-button {
-                display: none;
-            }
-        }
-
-        /* Desktop Dropdown Styles */
-        @media screen and (min-width: 1024px) {
-
-            /* Ensure sub-menus only appear when hovering over the parent item */
-            #service_dropdown .dropdown:hover>.dropdown-menu,
-            #serviceArea_dropdown .dropdown:hover>.dropdown-menu {
-                display: block;
-            }
-
-            /* Standard styling for dropdown submenus */
-            #service_dropdown .dropdown-menu.dropdown-submenu,
-            #serviceArea_dropdown .dropdown-menu.dropdown-submenu {
-                top: -5px;
-                left: 90%;
-                margin-left: 0.1rem;
-                display: none;
-                position: absolute;
-            }
-
-            /* General dropdown menu transitions */
-            #service_dropdown .dropdown-menu,
-            #serviceArea_dropdown .dropdown-menu {
-                display: none;
-                transition: all 0.3s ease-in-out;
-                z-index: 1050;
-            }
-
-            /* Optional: Add delay for opening and closing the menu */
-            #service_dropdown:hover>.dropdown-menu,
-            #serviceArea_dropdown:hover>.dropdown-menu,
-            .dropdown-item.dropdown:hover>.dropdown-menu,
-            #service_dropdown,
-            #serviceArea_dropdown,
-            .dropdown-item.dropdown {
-                transition-delay: 0.2s;
-            }
-        }
-
-        /* Mobile Menu Styling */
-        @media (max-width: 768px) {
-
-            #mobileServiceDropdown .nav-link,
-            #mobileServiceAreaDropdown .nav-link {
-                padding-left: 20px;
-            }
-
-            /* Submenu indentation for mobile */
-            .ms-3 {
-                padding-left: 30px;
-            }
-
-            .nav-item.nav-link {
-                font-size: 1rem;
-            }
-
-            /* Custom styling for dropdown toggle on mobile */
-            #mobileServicesMenu .nav-item.nav-link,
-            #mobileServiceAreaMenu .nav-item.nav-link {
-                font-weight: bold;
-            }
-
-            /* Ensure collapsed submenus are hidden on mobile until toggled */
-            #mobileServiceDropdown .collapse,
-            #mobileServiceAreaDropdown .collapse {
-                display: none;
-            }
-
-            #mobileServiceDropdown .collapse.show,
-            #mobileServiceAreaDropdown .collapse.show {
-                display: block;
-            }
-
-            /* Hide parent dropdowns on mobile */
-            #parentServiceDropdown,
-            #parentServiceAreaDropdown {
-                display: none;
-            }
-        }
-    </style>
+    }
+     </style>
 <script type="application/ld+json">{
     "@context": "https://schema.org",
     "@type": "BreadcrumbList",
@@ -166,37 +170,58 @@
         {
             "@type": "ListItem",
             "position": 2,
-            "name": "Contact",
-            "item": "https://plumberwinchesterky.com/contact"
+            "name": "FAQS",
+            "item": "https://plumberwinchesterky.com/faqs"
         }
     ]
 }</script></head>
 <body>
 <a class="call-now-button phoneNumber" href="tel:(859) 900-0703" id="btn_CallNow">
-<i>📞</i> Call Now
-    </a>
+<i>
+    📞
+   </i>
+   Call Now
+  </a>
 <!-- Topbar Start -->
 <div class="container-fluid bg-light d-none d-lg-block">
 <div class="row align-items-center top-bar">
 <div class="col-lg-3 col-md-12 text-center text-lg-start">
-<a class="navbar-brand m-0 p-0" href="https://plumberwinchesterky.com/">
+<a class="navbar-brand m-0 p-0 homeURL" href="https://plumberwinchesterky.com">
 <img alt="Logo" class="m-0 img w-50" id="logo_desktop" src="https://ik.imagekit.io/5qfjdtfh72/Plumbing%20Lead%20Gen/Winchester/Desktop%20Logo%20(36).png?updatedAt=1740555735606"/>
 </a>
 </div>
 <div class="col-lg-9 col-md-12 text-end">
 <div class="h-100 d-inline-flex align-items-center me-4">
-<i class="fa fa-map-marker-alt text-primary me-2"></i>
-<p class="m-0" id="contact_top_nav_city">38 N Bloomfield Rd, Winchester, KY 40391, USA</p>
+<i class="fa fa-map-marker-alt text-primary me-2">
+</i>
+<p class="m-0" id="top_nav_city">
+       38 N Bloomfield Rd, Winchester, KY 40391, USA
+      </p>
 </div>
 <div class="h-100 d-inline-flex align-items-center me-4">
-<i class="far fa-envelope-open text-primary me-2"></i>
-<p class="m-0" id="top_nav_email">info@plumberwinchesterky.com</p>
+<i class="far fa-envelope-open text-primary me-2">
+</i>
+<p class="m-0" id="top_nav_email">
+       info@plumberwinchesterky.com
+      </p>
 </div>
 <div class="h-100 d-inline-flex align-items-center">
-<a class="socialFacebook btn btn-sm-square bg-white text-primary me-1" href="#"><i class="fab fa-facebook-f"></i></a>
-<a class="socialInstagram btn btn-sm-square bg-white text-primary me-1" href="#"><i class="fab fa-instagram"></i></a>
-<a class="socialLinkedin btn btn-sm-square bg-white text-primary me-1" href="#"><i class="fab fa-linkedin-in"></i></a>
-<a class="socialPinterest btn btn-sm-square bg-white text-primary me-0" href="#"><i class="fab fa-pinterest"></i></a>
+<a class="socialFacebook btn btn-sm-square bg-white text-primary me-1" href="#">
+<i class="fab fa-facebook-f">
+</i>
+</a>
+<a class="socialInstagram btn btn-sm-square bg-white text-primary me-1" href="#">
+<i class="fab fa-instagram">
+</i>
+</a>
+<a class="socialLinkedin btn btn-sm-square bg-white text-primary me-1" href="#">
+<i class="fab fa-linkedin-in">
+</i>
+</a>
+<a class="socialPinterest btn btn-sm-square bg-white text-primary me-0" href="#">
+<i class="fab fa-pinterest">
+</i>
+</a>
 </div>
 </div>
 </div>
@@ -205,47 +230,70 @@
 <!-- Navbar Start -->
 <div class="container-fluid nav-bar bg-light">
 <nav class="navbar navbar-expand-lg navbar-light bg-white p-3 py-lg-0 px-lg-4">
-<a class="navbar-brand d-flex align-items-center m-0 p-0 d-lg-none homeURL" href="https://plumberwinchesterky.com">
+<a class="navbar-brand d-flex align-items-center m-0 p-0 d-lg-none" href="https://plumberwinchesterky.com/">
 <img alt="Logo" class="m-0" id="logo_mobile" src="https://ik.imagekit.io/5qfjdtfh72/Plumbing%20Lead%20Gen/Winchester/Mobile%20Logo%20(35).png?updatedAt=1740555735315"/>
 </a>
 <button class="navbar-toggler" data-bs-target="#navbarCollapse" data-bs-toggle="collapse" type="button">
-<span class="fa fa-bars"></span>
+<span class="fa fa-bars">
+</span>
 </button>
 <div class="collapse navbar-collapse" id="navbarCollapse">
 <div class="navbar-nav me-auto">
-<a class="nav-item nav-link active homeURL" href="https://plumberwinchesterky.com">Home</a>
-<a class="nav-item nav-link" href="https://plumberwinchesterky.com/about">About</a>
+<a class="nav-item nav-link active homeURL" href="https://plumberwinchesterky.com">
+       Home
+      </a>
+<a class="nav-item nav-link" href="https://plumberwinchesterky.com/about">
+       About
+      </a>
 <!-- Services Dropdown -->
 <div class="nav-item dropdown" id="parentServiceDropdown">
-<a class="nav-link dropdown-toggle" data-bs-toggle="dropdown" href="#">Services</a>
+<a class="nav-link dropdown-toggle" data-bs-toggle="dropdown" href="#">
+        Services
+       </a>
 <div class="dropdown-menu fade-up m-0" id="service_dropdown"><div class="dropdown-item dropdown"><a class="dropdown-toggle dropdown-item" href="/emergency-plumbing">Emergency Plumbing</a><div class="dropdown-menu dropdown-submenu"><a class="dropdown-item" href="/emergency-plumbing/24-hour-emergency-plumbing">24-Hour Emergency Plumbing</a><a class="dropdown-item" href="/emergency-plumbing/burst-pipe-repair">Burst Pipe Repair</a><a class="dropdown-item" href="/emergency-plumbing/flooded-basement-solutions">Flooded Basement Solutions</a></div></div><div class="dropdown-item dropdown"><a class="dropdown-toggle dropdown-item" href="/leak-detection-and-repair">Leak Detection And Repair</a><div class="dropdown-menu dropdown-submenu"><a class="dropdown-item" href="/leak-detection-and-repair/water-leak-detection">Water Leak Detection</a><a class="dropdown-item" href="/leak-detection-and-repair/slab-leak-repair">Slab Leak Repair</a><a class="dropdown-item" href="/leak-detection-and-repair/faucet-leak-repair">Faucet Leak Repair</a><a class="dropdown-item" href="/leak-detection-and-repair/toilet-leak-repair">Toilet Leak Repair</a><a class="dropdown-item" href="/leak-detection-and-repair/pipe-leak-repair">Pipe Leak Repair</a></div></div><div class="dropdown-item dropdown"><a class="dropdown-toggle dropdown-item" href="/drain-cleaning">Drain Cleaning</a><div class="dropdown-menu dropdown-submenu"><a class="dropdown-item" href="/drain-cleaning/clogged-drain-repair">Clogged Drain Repair</a><a class="dropdown-item" href="/drain-cleaning/hydro-jetting-services">Hydro Jetting Services</a><a class="dropdown-item" href="/drain-cleaning/sewer-drain-cleaning">Sewer Drain Cleaning</a><a class="dropdown-item" href="/drain-cleaning/kitchen-drain-cleaning">Kitchen Drain Cleaning</a><a class="dropdown-item" href="/drain-cleaning/bathroom-drain-cleaning">Bathroom Drain Cleaning</a></div></div><div class="dropdown-item dropdown"><a class="dropdown-toggle dropdown-item" href="/water-heater-services">Water Heater Services</a><div class="dropdown-menu dropdown-submenu"><a class="dropdown-item" href="/water-heater-services/water-heater-installation">Water Heater Installation</a><a class="dropdown-item" href="/water-heater-services/water-heater-repair">Water Heater Repair</a><a class="dropdown-item" href="/water-heater-services/tankless-water-heater-installation">Tankless Water Heater Installation</a><a class="dropdown-item" href="/water-heater-services/water-heater-maintenance">Water Heater Maintenance</a><a class="dropdown-item" href="/water-heater-services/water-heater-replacement">Water Heater Replacement</a></div></div><div class="dropdown-item dropdown"><a class="dropdown-toggle dropdown-item" href="/pipe-repair-and-replacement">Pipe Repair and Replacement</a><div class="dropdown-menu dropdown-submenu"><a class="dropdown-item" href="/pipe-repair-and-replacement/repiping-services">Repiping Services</a><a class="dropdown-item" href="/pipe-repair-and-replacement/copper-pipe-repair">Copper Pipe Repair</a><a class="dropdown-item" href="/pipe-repair-and-replacement/pex-pipe-installation">PEX Pipe Installation</a><a class="dropdown-item" href="/pipe-repair-and-replacement/pipe-insulation-services">Pipe Insulation Services</a></div></div><div class="dropdown-item dropdown"><a class="dropdown-toggle dropdown-item" href="/bathroom-plumbing">Bathroom Plumbing</a><div class="dropdown-menu dropdown-submenu"><a class="dropdown-item" href="/bathroom-plumbing/toilet-installation-and-repair">Toilet Installation and Repair</a><a class="dropdown-item" href="/bathroom-plumbing/shower-and-bathtub-installation">Shower and Bathtub Installation</a><a class="dropdown-item" href="/bathroom-plumbing/bath-faucet-and-sink-installation">Bath Faucet and Sink Installation</a><a class="dropdown-item" href="/bathroom-plumbing/bidet-installation">Bidet Installation</a></div></div><div class="dropdown-item dropdown"><a class="dropdown-toggle dropdown-item" href="/kitchen-plumbing">Kitchen Plumbing</a><div class="dropdown-menu dropdown-submenu"><a class="dropdown-item" href="/kitchen-plumbing/garbage-disposal-repair-and-installation">Garbage Disposal Repair and Installation</a><a class="dropdown-item" href="/kitchen-plumbing/kitchen-faucet-and-sink-installation">Kitchen Faucet and Sink Installation</a><a class="dropdown-item" href="/kitchen-plumbing/dishwasher-installation">Dishwasher Installation</a><a class="dropdown-item" href="/kitchen-plumbing/ice-maker-line-installation">Ice Maker Line Installation</a></div></div><div class="dropdown-item dropdown"><a class="dropdown-toggle dropdown-item" href="/sewer-line-services">Sewer Line Services</a><div class="dropdown-menu dropdown-submenu"><a class="dropdown-item" href="/sewer-line-services/sewer-line-repair">Sewer Line Repair</a><a class="dropdown-item" href="/sewer-line-services/sewer-line-replacement">Sewer Line Replacement</a><a class="dropdown-item" href="/sewer-line-services/trenchless-sewer-repair">Trenchless Sewer Repair</a><a class="dropdown-item" href="/sewer-line-services/sewer-camera-inspection">Sewer Camera Inspection</a></div></div><div class="dropdown-item dropdown"><a class="dropdown-toggle dropdown-item" href="/gas-line-services">Gas Line Services</a><div class="dropdown-menu dropdown-submenu"><a class="dropdown-item" href="/gas-line-services/gas-line-installation">Gas Line Installation</a><a class="dropdown-item" href="/gas-line-services/gas-line-repair">Gas Line Repair</a><a class="dropdown-item" href="/gas-line-services/gas-leak-detection">Gas Leak Detection</a></div></div><div class="dropdown-item dropdown"><a class="dropdown-toggle dropdown-item" href="/water-filtration-and-softening">Water Filtration and Softening</a><div class="dropdown-menu dropdown-submenu"><a class="dropdown-item" href="/water-filtration-and-softening/whole-house-water-filtration-installation">Whole-House Water Filtration Installation</a><a class="dropdown-item" href="/water-filtration-and-softening/water-softener-installation">Water Softener Installation</a><a class="dropdown-item" href="/water-filtration-and-softening/reverse-osmosis-systems">Reverse Osmosis Systems</a></div></div><div class="dropdown-item dropdown"><a class="dropdown-toggle dropdown-item" href="/outdoor-plumbing">Outdoor Plumbing</a><div class="dropdown-menu dropdown-submenu"><a class="dropdown-item" href="/outdoor-plumbing/outdoor-faucet-installation">Outdoor Faucet Installation</a><a class="dropdown-item" href="/outdoor-plumbing/irrigation-system-installation-and-repair">Irrigation System Installation and Repair</a><a class="dropdown-item" href="/outdoor-plumbing/swimming-pool-plumbing-services">Swimming Pool Plumbing Services</a></div></div><div class="dropdown-item dropdown"><a class="dropdown-toggle dropdown-item" href="/maintenance-and-inspections">Maintenance and Inspections</a><div class="dropdown-menu dropdown-submenu"><a class="dropdown-item" href="/maintenance-and-inspections/plumbing-system-inspections">Plumbing System Inspections</a><a class="dropdown-item" href="/maintenance-and-inspections/routine-plumbing-maintenance">Routine Plumbing Maintenance</a><a class="dropdown-item" href="/maintenance-and-inspections/seasonal-plumbing-check-ups">Seasonal Plumbing Check-ups</a></div></div><div class="dropdown-item dropdown"><a class="dropdown-toggle dropdown-item" href="/remodeling-and-new-construction-plumbing">Remodeling and New Construction Plumbing</a><div class="dropdown-menu dropdown-submenu"><a class="dropdown-item" href="/remodeling-and-new-construction-plumbing/kitchen-remodel-plumbing">Kitchen Remodel Plumbing</a><a class="dropdown-item" href="/remodeling-and-new-construction-plumbing/new-construction-plumbing">New Construction Plumbing</a></div></div><div class="dropdown-item dropdown"><a class="dropdown-toggle dropdown-item" href="/backflow-prevention">Backflow Prevention</a><div class="dropdown-menu dropdown-submenu"><a class="dropdown-item" href="/backflow-prevention/backflow-testing">Backflow Testing</a><a class="dropdown-item" href="/backflow-prevention/backflow-prevention-device-installation">Backflow Prevention Device Installation</a><a class="dropdown-item" href="/backflow-prevention/backflow-repair-and-maintenance">Backflow Repair and Maintenance</a></div></div><div class="dropdown-item dropdown"><a class="dropdown-toggle dropdown-item" href="/sump-pump-services">Sump Pump Services</a><div class="dropdown-menu dropdown-submenu"><a class="dropdown-item" href="/sump-pump-services/sump-pump-installation">Sump Pump Installation</a><a class="dropdown-item" href="/sump-pump-services/sump-pump-repair">Sump Pump Repair</a><a class="dropdown-item" href="/sump-pump-services/sump-pump-maintenance">Sump Pump Maintenance</a><a class="dropdown-item" href="/sump-pump-services/battery-backup-sump-pumps">Battery Backup Sump Pumps</a></div></div><div class="dropdown-item dropdown"><a class="dropdown-toggle dropdown-item" href="/water-pressure-issues">Water Pressure Issues</a><div class="dropdown-menu dropdown-submenu"><a class="dropdown-item" href="/water-pressure-issues/water-pressure-testing">Water Pressure Testing</a><a class="dropdown-item" href="/water-pressure-issues/low-water-pressure-solutions">Low Water Pressure Solutions</a><a class="dropdown-item" href="/water-pressure-issues/high-water-pressure-regulation">High Water Pressure Regulation</a></div></div><div class="dropdown-item dropdown"><a class="dropdown-toggle dropdown-item" href="/eco-friendly-plumbing-solutions">Eco-Friendly Plumbing Solutions</a><div class="dropdown-menu dropdown-submenu"><a class="dropdown-item" href="/eco-friendly-plumbing-solutions/low-flow-fixture-installation">Low-Flow Fixture Installation</a><a class="dropdown-item" href="/eco-friendly-plumbing-solutions/greywater-recycling-systems">Greywater Recycling Systems</a><a class="dropdown-item" href="/eco-friendly-plumbing-solutions/rainwater-harvesting-systems">Rainwater Harvesting Systems</a></div></div></div>
 </div>
 <div class="d-block d-lg-none" id="mobileServicesMenu">
-<a class="nav-item nav-link dropdown-toggle" data-bs-target="#mobileServiceDropdown" data-bs-toggle="collapse" href="#">Services</a>
+<a class="nav-item nav-link dropdown-toggle" data-bs-target="#mobileServiceDropdown" data-bs-toggle="collapse" href="#">
+        Services
+       </a>
 <div class="collapse" id="mobileServiceDropdown"><a class="nav-item nav-link dropdown-toggle" data-bs-target="#emergencyplumbingDropdown" data-bs-toggle="collapse" href="/emergency-plumbing">Emergency Plumbing</a><div class="collapse ms-3" id="emergencyplumbingDropdown"><a class="nav-item nav-link" href="/emergency-plumbing/24-hour-emergency-plumbing">24-Hour Emergency Plumbing</a><a class="nav-item nav-link" href="/emergency-plumbing/burst-pipe-repair">Burst Pipe Repair</a><a class="nav-item nav-link" href="/emergency-plumbing/flooded-basement-solutions">Flooded Basement Solutions</a></div><a class="nav-item nav-link dropdown-toggle" data-bs-target="#leakdetectionandrepairDropdown" data-bs-toggle="collapse" href="/leak-detection-and-repair">Leak Detection And Repair</a><div class="collapse ms-3" id="leakdetectionandrepairDropdown"><a class="nav-item nav-link" href="/leak-detection-and-repair/water-leak-detection">Water Leak Detection</a><a class="nav-item nav-link" href="/leak-detection-and-repair/slab-leak-repair">Slab Leak Repair</a><a class="nav-item nav-link" href="/leak-detection-and-repair/faucet-leak-repair">Faucet Leak Repair</a><a class="nav-item nav-link" href="/leak-detection-and-repair/toilet-leak-repair">Toilet Leak Repair</a><a class="nav-item nav-link" href="/leak-detection-and-repair/pipe-leak-repair">Pipe Leak Repair</a></div><a class="nav-item nav-link dropdown-toggle" data-bs-target="#draincleaningDropdown" data-bs-toggle="collapse" href="/drain-cleaning">Drain Cleaning</a><div class="collapse ms-3" id="draincleaningDropdown"><a class="nav-item nav-link" href="/drain-cleaning/clogged-drain-repair">Clogged Drain Repair</a><a class="nav-item nav-link" href="/drain-cleaning/hydro-jetting-services">Hydro Jetting Services</a><a class="nav-item nav-link" href="/drain-cleaning/sewer-drain-cleaning">Sewer Drain Cleaning</a><a class="nav-item nav-link" href="/drain-cleaning/kitchen-drain-cleaning">Kitchen Drain Cleaning</a><a class="nav-item nav-link" href="/drain-cleaning/bathroom-drain-cleaning">Bathroom Drain Cleaning</a></div><a class="nav-item nav-link dropdown-toggle" data-bs-target="#waterheaterservicesDropdown" data-bs-toggle="collapse" href="/water-heater-services">Water Heater Services</a><div class="collapse ms-3" id="waterheaterservicesDropdown"><a class="nav-item nav-link" href="/water-heater-services/water-heater-installation">Water Heater Installation</a><a class="nav-item nav-link" href="/water-heater-services/water-heater-repair">Water Heater Repair</a><a class="nav-item nav-link" href="/water-heater-services/tankless-water-heater-installation">Tankless Water Heater Installation</a><a class="nav-item nav-link" href="/water-heater-services/water-heater-maintenance">Water Heater Maintenance</a><a class="nav-item nav-link" href="/water-heater-services/water-heater-replacement">Water Heater Replacement</a></div><a class="nav-item nav-link dropdown-toggle" data-bs-target="#piperepairandreplacementDropdown" data-bs-toggle="collapse" href="/pipe-repair-and-replacement">Pipe Repair and Replacement</a><div class="collapse ms-3" id="piperepairandreplacementDropdown"><a class="nav-item nav-link" href="/pipe-repair-and-replacement/repiping-services">Repiping Services</a><a class="nav-item nav-link" href="/pipe-repair-and-replacement/copper-pipe-repair">Copper Pipe Repair</a><a class="nav-item nav-link" href="/pipe-repair-and-replacement/pex-pipe-installation">PEX Pipe Installation</a><a class="nav-item nav-link" href="/pipe-repair-and-replacement/pipe-insulation-services">Pipe Insulation Services</a></div><a class="nav-item nav-link dropdown-toggle" data-bs-target="#bathroomplumbingDropdown" data-bs-toggle="collapse" href="/bathroom-plumbing">Bathroom Plumbing</a><div class="collapse ms-3" id="bathroomplumbingDropdown"><a class="nav-item nav-link" href="/bathroom-plumbing/toilet-installation-and-repair">Toilet Installation and Repair</a><a class="nav-item nav-link" href="/bathroom-plumbing/shower-and-bathtub-installation">Shower and Bathtub Installation</a><a class="nav-item nav-link" href="/bathroom-plumbing/bath-faucet-and-sink-installation">Bath Faucet and Sink Installation</a><a class="nav-item nav-link" href="/bathroom-plumbing/bidet-installation">Bidet Installation</a></div><a class="nav-item nav-link dropdown-toggle" data-bs-target="#kitchenplumbingDropdown" data-bs-toggle="collapse" href="/kitchen-plumbing">Kitchen Plumbing</a><div class="collapse ms-3" id="kitchenplumbingDropdown"><a class="nav-item nav-link" href="/kitchen-plumbing/garbage-disposal-repair-and-installation">Garbage Disposal Repair and Installation</a><a class="nav-item nav-link" href="/kitchen-plumbing/kitchen-faucet-and-sink-installation">Kitchen Faucet and Sink Installation</a><a class="nav-item nav-link" href="/kitchen-plumbing/dishwasher-installation">Dishwasher Installation</a><a class="nav-item nav-link" href="/kitchen-plumbing/ice-maker-line-installation">Ice Maker Line Installation</a></div><a class="nav-item nav-link dropdown-toggle" data-bs-target="#sewerlineservicesDropdown" data-bs-toggle="collapse" href="/sewer-line-services">Sewer Line Services</a><div class="collapse ms-3" id="sewerlineservicesDropdown"><a class="nav-item nav-link" href="/sewer-line-services/sewer-line-repair">Sewer Line Repair</a><a class="nav-item nav-link" href="/sewer-line-services/sewer-line-replacement">Sewer Line Replacement</a><a class="nav-item nav-link" href="/sewer-line-services/trenchless-sewer-repair">Trenchless Sewer Repair</a><a class="nav-item nav-link" href="/sewer-line-services/sewer-camera-inspection">Sewer Camera Inspection</a></div><a class="nav-item nav-link dropdown-toggle" data-bs-target="#gaslineservicesDropdown" data-bs-toggle="collapse" href="/gas-line-services">Gas Line Services</a><div class="collapse ms-3" id="gaslineservicesDropdown"><a class="nav-item nav-link" href="/gas-line-services/gas-line-installation">Gas Line Installation</a><a class="nav-item nav-link" href="/gas-line-services/gas-line-repair">Gas Line Repair</a><a class="nav-item nav-link" href="/gas-line-services/gas-leak-detection">Gas Leak Detection</a></div><a class="nav-item nav-link dropdown-toggle" data-bs-target="#waterfiltrationandsofteningDropdown" data-bs-toggle="collapse" href="/water-filtration-and-softening">Water Filtration and Softening</a><div class="collapse ms-3" id="waterfiltrationandsofteningDropdown"><a class="nav-item nav-link" href="/water-filtration-and-softening/whole-house-water-filtration-installation">Whole-House Water Filtration Installation</a><a class="nav-item nav-link" href="/water-filtration-and-softening/water-softener-installation">Water Softener Installation</a><a class="nav-item nav-link" href="/water-filtration-and-softening/reverse-osmosis-systems">Reverse Osmosis Systems</a></div><a class="nav-item nav-link dropdown-toggle" data-bs-target="#outdoorplumbingDropdown" data-bs-toggle="collapse" href="/outdoor-plumbing">Outdoor Plumbing</a><div class="collapse ms-3" id="outdoorplumbingDropdown"><a class="nav-item nav-link" href="/outdoor-plumbing/outdoor-faucet-installation">Outdoor Faucet Installation</a><a class="nav-item nav-link" href="/outdoor-plumbing/irrigation-system-installation-and-repair">Irrigation System Installation and Repair</a><a class="nav-item nav-link" href="/outdoor-plumbing/swimming-pool-plumbing-services">Swimming Pool Plumbing Services</a></div><a class="nav-item nav-link dropdown-toggle" data-bs-target="#maintenanceandinspectionsDropdown" data-bs-toggle="collapse" href="/maintenance-and-inspections">Maintenance and Inspections</a><div class="collapse ms-3" id="maintenanceandinspectionsDropdown"><a class="nav-item nav-link" href="/maintenance-and-inspections/plumbing-system-inspections">Plumbing System Inspections</a><a class="nav-item nav-link" href="/maintenance-and-inspections/routine-plumbing-maintenance">Routine Plumbing Maintenance</a><a class="nav-item nav-link" href="/maintenance-and-inspections/seasonal-plumbing-check-ups">Seasonal Plumbing Check-ups</a></div><a class="nav-item nav-link dropdown-toggle" data-bs-target="#remodelingandnewconstructionplumbingDropdown" data-bs-toggle="collapse" href="/remodeling-and-new-construction-plumbing">Remodeling and New Construction Plumbing</a><div class="collapse ms-3" id="remodelingandnewconstructionplumbingDropdown"><a class="nav-item nav-link" href="/remodeling-and-new-construction-plumbing/kitchen-remodel-plumbing">Kitchen Remodel Plumbing</a><a class="nav-item nav-link" href="/remodeling-and-new-construction-plumbing/new-construction-plumbing">New Construction Plumbing</a></div><a class="nav-item nav-link dropdown-toggle" data-bs-target="#backflowpreventionDropdown" data-bs-toggle="collapse" href="/backflow-prevention">Backflow Prevention</a><div class="collapse ms-3" id="backflowpreventionDropdown"><a class="nav-item nav-link" href="/backflow-prevention/backflow-testing">Backflow Testing</a><a class="nav-item nav-link" href="/backflow-prevention/backflow-prevention-device-installation">Backflow Prevention Device Installation</a><a class="nav-item nav-link" href="/backflow-prevention/backflow-repair-and-maintenance">Backflow Repair and Maintenance</a></div><a class="nav-item nav-link dropdown-toggle" data-bs-target="#sumppumpservicesDropdown" data-bs-toggle="collapse" href="/sump-pump-services">Sump Pump Services</a><div class="collapse ms-3" id="sumppumpservicesDropdown"><a class="nav-item nav-link" href="/sump-pump-services/sump-pump-installation">Sump Pump Installation</a><a class="nav-item nav-link" href="/sump-pump-services/sump-pump-repair">Sump Pump Repair</a><a class="nav-item nav-link" href="/sump-pump-services/sump-pump-maintenance">Sump Pump Maintenance</a><a class="nav-item nav-link" href="/sump-pump-services/battery-backup-sump-pumps">Battery Backup Sump Pumps</a></div><a class="nav-item nav-link dropdown-toggle" data-bs-target="#waterpressureissuesDropdown" data-bs-toggle="collapse" href="/water-pressure-issues">Water Pressure Issues</a><div class="collapse ms-3" id="waterpressureissuesDropdown"><a class="nav-item nav-link" href="/water-pressure-issues/water-pressure-testing">Water Pressure Testing</a><a class="nav-item nav-link" href="/water-pressure-issues/low-water-pressure-solutions">Low Water Pressure Solutions</a><a class="nav-item nav-link" href="/water-pressure-issues/high-water-pressure-regulation">High Water Pressure Regulation</a></div><a class="nav-item nav-link dropdown-toggle" data-bs-target="#eco-friendlyplumbingsolutionsDropdown" data-bs-toggle="collapse" href="/eco-friendly-plumbing-solutions">Eco-Friendly Plumbing Solutions</a><div class="collapse ms-3" id="eco-friendlyplumbingsolutionsDropdown"><a class="nav-item nav-link" href="/eco-friendly-plumbing-solutions/low-flow-fixture-installation">Low-Flow Fixture Installation</a><a class="nav-item nav-link" href="/eco-friendly-plumbing-solutions/greywater-recycling-systems">Greywater Recycling Systems</a><a class="nav-item nav-link" href="/eco-friendly-plumbing-solutions/rainwater-harvesting-systems">Rainwater Harvesting Systems</a></div></div>
 </div>
 <!-- Service Area Dropdown -->
 <div class="nav-item dropdown" id="parentServiceAreaDropdown">
-<a class="nav-link dropdown-toggle" data-bs-toggle="" href="https://plumberwinchesterky.com/service-areas">Service
-                            Areas</a>
+<a class="nav-link dropdown-toggle" data-bs-toggle="" href="https://plumberwinchesterky.com/service-areas">
+        Service Areas
+       </a>
 <div class="dropdown-menu fade-up m-0" id="serviceArea_dropdown"><a class="dropdown-item" href="https://plumberwinchesterky.com/service-areas/boonesboro-point">Boonesboro Point</a><a class="dropdown-item" href="https://plumberwinchesterky.com/service-areas/meadowbrook">Meadowbrook</a><a class="dropdown-item" href="https://plumberwinchesterky.com/service-areas/bel-air">Bel Air</a><a class="dropdown-item" href="https://plumberwinchesterky.com/service-areas/tennyson-park">Tennyson Park</a><a class="dropdown-item" href="https://plumberwinchesterky.com/service-areas/forest-park">Forest Park</a><a class="dropdown-item" href="https://plumberwinchesterky.com/service-areas/westbend">Westbend</a><a class="dropdown-item" href="https://plumberwinchesterky.com/service-areas/rolling-acres">Rolling Acres</a><a class="dropdown-item" href="https://plumberwinchesterky.com/service-areas/hickman-creek">Hickman Creek</a><a class="dropdown-item" href="https://plumberwinchesterky.com/service-areas/park-place">Park Place</a><a class="dropdown-item" href="https://plumberwinchesterky.com/service-areas/willow-bend">Willow Bend</a></div>
 </div>
 <div class="d-block d-lg-none" id="mobileServiceAreaMenu">
-<a class="nav-item nav-link dropdown-toggle" data-bs-target="#mobileServiceAreaDropdown" data-bs-toggle="collapse" href="#">Service Areas</a>
+<a class="nav-item nav-link dropdown-toggle" data-bs-target="#mobileServiceAreaDropdown" data-bs-toggle="collapse" href="#">
+        Service Areas
+       </a>
 <div class="collapse" id="mobileServiceAreaDropdown"><a class="dropdown-item" href="https://plumberwinchesterky.com/service-areas/boonesboro-point">Boonesboro Point</a><a class="dropdown-item" href="https://plumberwinchesterky.com/service-areas/meadowbrook">Meadowbrook</a><a class="dropdown-item" href="https://plumberwinchesterky.com/service-areas/bel-air">Bel Air</a><a class="dropdown-item" href="https://plumberwinchesterky.com/service-areas/tennyson-park">Tennyson Park</a><a class="dropdown-item" href="https://plumberwinchesterky.com/service-areas/forest-park">Forest Park</a><a class="dropdown-item" href="https://plumberwinchesterky.com/service-areas/westbend">Westbend</a><a class="dropdown-item" href="https://plumberwinchesterky.com/service-areas/rolling-acres">Rolling Acres</a><a class="dropdown-item" href="https://plumberwinchesterky.com/service-areas/hickman-creek">Hickman Creek</a><a class="dropdown-item" href="https://plumberwinchesterky.com/service-areas/park-place">Park Place</a><a class="dropdown-item" href="https://plumberwinchesterky.com/service-areas/willow-bend">Willow Bend</a></div>
 </div>
-<a class="nav-item nav-link" href="https://plumberwinchesterky.com/testimonial">Testimonial</a>
-<a class="nav-item nav-link" href="https://plumberwinchesterky.com/faqs">FAQs</a>
-<a class="nav-item nav-link" href="https://plumberwinchesterky.com/contact">Contact</a>
+<a class="nav-item nav-link" href="https://plumberwinchesterky.com/testimonial">
+       Testimonial
+      </a>
+<a class="nav-item nav-link" href="https://plumberwinchesterky.com/faqs">
+       FAQs
+      </a>
+<a class="nav-item nav-link" href="https://plumberwinchesterky.com/contact">
+       Contact
+      </a>
 </div>
 <div class="mt-4 mt-lg-0 me-lg-n4 py-3 px-4 bg-primary d-flex align-items-center">
 <div class="d-flex flex-shrink-0 align-items-center justify-content-center bg-white" style="width: 45px; height: 45px;">
-<i class="fa fa-phone-alt text-primary"></i>
+<i class="fa fa-phone-alt text-primary">
+</i>
 </div>
 <div class="ms-3">
-<p class="mb-1 text-white">Emergency 24/7</p>
+<p class="mb-1 text-white">
+        Emergency 24/7
+       </p>
 <h5 class="m-0 text-secondary">
-<a class="text-secondary text-decoration-none phoneNumber" href="tel:(859) 900-0703" id="contact_top_nav_phone">(859) 900-0703</a>
+<a class="text-secondary text-decoration-none phoneNumber" href="tel:(859) 900-0703" id="top_nav_phone">
+         (859) 900-0703
+        </a>
 </h5>
 </div>
 </div>
@@ -256,84 +304,253 @@
 <!-- Page Header Start -->
 <div class="container-fluid page-header mb-5 py-5">
 <div class="container">
-<h1 class="display-3 text-white mb-3 animated slideInDown">Contact Us</h1>
+<h1 class="display-3 text-white mb-3 animated slideInDown">
+     FAQS
+    </h1>
 <nav aria-label="breadcrumb animated slideInDown">
 <ol class="breadcrumb text-uppercase">
-<li class="breadcrumb-item"><a class="text-white" href="https://plumberwinchesterky.com/">Home</a></li>
-<li aria-current="page" class="breadcrumb-item text-white active"><a class="text-white" href="https://plumberwinchesterky.com/contact">Contact</a></li>
+<li class="breadcrumb-item">
+<a class="text-white" href="https://plumberwinchesterky.com/">
+        Home
+       </a>
+</li>
+<li class="breadcrumb-item active">
+<a class="text-white" href="https://plumberwinchesterky.com/faqs">
+        Faqs
+       </a>
+</li>
 </ol>
 </nav>
 </div>
 </div>
 <!-- Page Header End -->
-<!-- Contact Start -->
+<!-- Content Section Start -->
+<div class="container-fluid my-5 px-0">
+<div class="container">
+<h1 class="text-center mb-4">
+     Frequently Asked Questions
+    </h1>
+<div class="accordion" id="faqAccordion">
+<div class="accordion-item">
+<h2 class="accordion-header" id="headingFAQ1">
+<button aria-controls="collapseFAQ1" aria-expanded="true" class="accordion-button" data-bs-target="#collapseFAQ1" data-bs-toggle="collapse" type="button">
+        What plumbing services do you offer in Winchester, KY?
+       </button>
+</h2>
+<div aria-labelledby="headingFAQ1" class="accordion-collapse collapse show" data-bs-parent="#faqAccordion" id="collapseFAQ1">
+<div class="accordion-body">
+        We offer a range of plumbing services including leak repairs, drain cleaning, water heater installation and repair, pipe installation, and emergency plumbing services in Winchester, KY.
+       </div>
+</div>
+</div>
+<div class="accordion-item">
+<h2 class="accordion-header" id="headingFAQ2">
+<button aria-controls="collapseFAQ2" aria-expanded="false" class="accordion-button" data-bs-target="#collapseFAQ2" data-bs-toggle="collapse" type="button">
+        How can I schedule a plumbing service in Winchester, KY?
+       </button>
+</h2>
+<div aria-labelledby="headingFAQ2" class="accordion-collapse collapse" data-bs-parent="#faqAccordion" id="collapseFAQ2">
+<div class="accordion-body">
+        You can schedule a plumbing service by calling our office directly or booking an appointment through our website's contact form.
+       </div>
+</div>
+</div>
+<div class="accordion-item">
+<h2 class="accordion-header" id="headingFAQ3">
+<button aria-controls="collapseFAQ3" aria-expanded="false" class="accordion-button" data-bs-target="#collapseFAQ3" data-bs-toggle="collapse" type="button">
+        Do you provide emergency plumbing services in Winchester, KY?
+       </button>
+</h2>
+<div aria-labelledby="headingFAQ3" class="accordion-collapse collapse" data-bs-parent="#faqAccordion" id="collapseFAQ3">
+<div class="accordion-body">
+        Yes, we provide 24/7 emergency plumbing services in Winchester, KY to address urgent issues like burst pipes, severe leaks, and other emergencies.
+       </div>
+</div>
+</div>
+<div class="accordion-item">
+<h2 class="accordion-header" id="headingFAQ4">
+<button aria-controls="collapseFAQ4" aria-expanded="false" class="accordion-button" data-bs-target="#collapseFAQ4" data-bs-toggle="collapse" type="button">
+        What areas do you serve around Winchester, KY?
+       </button>
+</h2>
+<div aria-labelledby="headingFAQ4" class="accordion-collapse collapse" data-bs-parent="#faqAccordion" id="collapseFAQ4">
+<div class="accordion-body">
+        In addition to Winchester, KY, we also serve the surrounding areas including Lexington, Paris, Mt. Sterling, and Richmond.
+       </div>
+</div>
+</div>
+<div class="accordion-item">
+<h2 class="accordion-header" id="headingFAQ5">
+<button aria-controls="collapseFAQ5" aria-expanded="false" class="accordion-button" data-bs-target="#collapseFAQ5" data-bs-toggle="collapse" type="button">
+        Are your plumbers licensed and insured?
+       </button>
+</h2>
+<div aria-labelledby="headingFAQ5" class="accordion-collapse collapse" data-bs-parent="#faqAccordion" id="collapseFAQ5">
+<div class="accordion-body">
+        Yes, all our plumbers are fully licensed and insured to ensure the highest quality of service and customer satisfaction.
+       </div>
+</div>
+</div>
+<div class="accordion-item">
+<h2 class="accordion-header" id="headingFAQ6">
+<button aria-controls="collapseFAQ6" aria-expanded="false" class="accordion-button" data-bs-target="#collapseFAQ6" data-bs-toggle="collapse" type="button">
+        How much do you charge for a plumbing service?
+       </button>
+</h2>
+<div aria-labelledby="headingFAQ6" class="accordion-collapse collapse" data-bs-parent="#faqAccordion" id="collapseFAQ6">
+<div class="accordion-body">
+        Our service charges vary depending on the type of service required. We offer free estimates to give you a clear idea of the costs involved.
+       </div>
+</div>
+</div>
+<div class="accordion-item">
+<h2 class="accordion-header" id="headingFAQ7">
+<button aria-controls="collapseFAQ7" aria-expanded="false" class="accordion-button" data-bs-target="#collapseFAQ7" data-bs-toggle="collapse" type="button">
+        Can you help with water heater installation and repair?
+       </button>
+</h2>
+<div aria-labelledby="headingFAQ7" class="accordion-collapse collapse" data-bs-parent="#faqAccordion" id="collapseFAQ7">
+<div class="accordion-body">
+        Yes, we specialize in water heater installation and repair, including traditional tank models and tankless systems.
+       </div>
+</div>
+</div>
+<div class="accordion-item">
+<h2 class="accordion-header" id="headingFAQ8">
+<button aria-controls="collapseFAQ8" aria-expanded="false" class="accordion-button" data-bs-target="#collapseFAQ8" data-bs-toggle="collapse" type="button">
+        What should I do in case of a plumbing emergency?
+       </button>
+</h2>
+<div aria-labelledby="headingFAQ8" class="accordion-collapse collapse" data-bs-parent="#faqAccordion" id="collapseFAQ8">
+<div class="accordion-body">
+        In case of a plumbing emergency, turn off the main water supply and contact our emergency plumbing service immediately for prompt assistance.
+       </div>
+</div>
+</div>
+<div class="accordion-item">
+<h2 class="accordion-header" id="headingFAQ9">
+<button aria-controls="collapseFAQ9" aria-expanded="false" class="accordion-button" data-bs-target="#collapseFAQ9" data-bs-toggle="collapse" type="button">
+        How often should I have my plumbing inspected?
+       </button>
+</h2>
+<div aria-labelledby="headingFAQ9" class="accordion-collapse collapse" data-bs-parent="#faqAccordion" id="collapseFAQ9">
+<div class="accordion-body">
+        We recommend having your plumbing system inspected at least once a year to prevent any potential issues and maintain its efficiency.
+       </div>
+</div>
+</div>
+<div class="accordion-item">
+<h2 class="accordion-header" id="headingFAQ10">
+<button aria-controls="collapseFAQ10" aria-expanded="false" class="accordion-button" data-bs-target="#collapseFAQ10" data-bs-toggle="collapse" type="button">
+        Do you offer any maintenance plans?
+       </button>
+</h2>
+<div aria-labelledby="headingFAQ10" class="accordion-collapse collapse" data-bs-parent="#faqAccordion" id="collapseFAQ10">
+<div class="accordion-body">
+        Yes, we offer plumbing maintenance plans to help keep your plumbing systems in top condition, preventing costly repairs and ensuring longevity.
+       </div>
+</div>
+</div>
+</div>
+</div>
+</div>
 <div class="container-xxl py-5">
 <div class="container">
 <div class="row g-4">
-<div class="col-md-6 wow fadeInUp" data-wow-delay="0.1s">
-<h6 class="text-secondary text-uppercase">Get In Touch</h6>
-<h1 class="mb-4" id="contact_section_title">Contact for Plumber Queries</h1>
-<p class="mb-4" id="contact_section_description">Are you ready to discover the possibilities without any commitment? Why not take a moment to explore your options with a free quote? Just imagine the ease and reassurance that comes with knowing exactly what you're dealing with. We invite you to take advantage of this opportunity by calling us at (859) 900-0703. Our friendly and knowledgeable team is standing by, ready to assist you with all the information you need. No strings attached—just valuable insights tailored to your needs. Don’t wait, make that call today and set yourself on the path to making informed decisions with confidence!</p>
-<iframe allowfullscreen="" aria-hidden="false" class="position-relative w-100" frameborder="0" id="mapFrame" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d125000!2d-84.14507!3d37.96969!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f18!3m3!1m2!1s0x0%3A0x0!2sLocation!5e0!3m2!1sen!2s!4v1234567890" style="height: 300px; border:0;" tabindex="0"></iframe>
-</div>
-<div class="col-md-6">
-<div class="p-5 d-flex align-items-center">
-<div>
-<h4 class="text-ligh mb-4">Address</h4>
-<hr/>
-<p class="mb-2 text-dark" id="page_business_name"><i class="fa fa-wrench me-3"></i>Pro Plumber Winchester</p>
-<p class="mb-2 text-dark" id="page_business_address"><i class="fa fa-map-marker-alt me-3"></i>38 N Bloomfield Rd, Winchester, KY 40391, USA</p>
-<p class="mb-2"><a class="text-dark text-decoration-none phoneNumber" href="tel:(859) 900-0703" id="page_phone"><i class="fa fa-phone-alt me-3"></i>(859) 900-0703</a></p>
-<p class="mb-2 text-dark" id="page_email"><i class="fa fa-envelope me-3"></i>info@plumberwinchesterky.com</p>
-<div class="d-flex pt-2">
-<a class="socialFacebook btn btn-outline-light btn-social text-dark" href="#"><i class="fab fa-facebook-f"></i></a>
-<a class="socialInstagram btn btn-outline-light btn-social text-dark" href="#"><i class="fab fa-instagram"></i></a>
-<a class="socialLinkedin btn btn-outline-light btn-social text-dark" href="#"><i class="fab fa-linkedin-in"></i></a>
-<a class="socialPinterest btn btn-outline-light btn-social text-dark" href="#"><i class="fab fa-pinterest"></i></a>
+<div class="col-md-12 wow fadeInUp" data-wow-delay="0.1s">
+<h1 class="mb-4" id="contact_section_title">
+       Find Us
+      </h1>
+<iframe allowfullscreen="" aria-hidden="false" class="position-relative w-100" frameborder="0" id="mapFrame" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d125000!2d-84.14507!3d37.96969!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f18!3m3!1m2!1s0x0%3A0x0!2sLocation!5e0!3m2!1sen!2s!4v1234567890" style="height: 300px; border:0;" tabindex="0">
+</iframe>
 </div>
 </div>
 </div>
 </div>
-</div>
-</div>
-</div>
-<!-- Contact End -->
 <!-- Footer Start -->
 <div class="container-fluid bg-dark text-light footer pt-5 mt-5 wow fadeIn" data-wow-delay="0.1s">
 <div class="container py-5">
 <div class="row g-5">
 <div class="col-lg-3 col-md-6">
-<h4 class="text-light mb-4">Business</h4>
-<p class="mb-2" id="footer_business_name">Pro Plumber Winchester</p>
-<p class="mb-2" id="businessAddress">38 N Bloomfield Rd, Winchester, KY 40391, USA</p>
-<p class="mb-2"><a class="text-light text-decoration-none phoneNumber" href="tel:(859) 900-0703" id="footer_phone">(859) 900-0703</a></p>
-<p class="mb-2" id="contact_footer_email">info@plumberwinchesterky.com</p>
+<h4 class="text-light mb-4">
+       Business
+      </h4>
+<p class="mb-2" id="footer_business_name">
+       Pro Plumber Winchester
+      </p>
+<p class="mb-2" id="businessAddress">
+       38 N Bloomfield Rd, Winchester, KY 40391, USA
+      </p>
+<p class="mb-2">
+<a class="text-light text-decoration-none phoneNumber" href="tel:(859) 900-0703" id="footer_phone">
+        (859) 900-0703
+       </a>
+</p>
+<p class="mb-2" id="footer_email">
+       info@plumberwinchesterky.com
+      </p>
 <div class="d-flex pt-2">
-<a class="socialFacebook btn btn-outline-light btn-social" href="#"><i class="fab fa-facebook-f"></i></a>
-<a class="socialInstagram btn btn-outline-light btn-social" href="#"><i class="fab fa-instagram"></i></a>
-<a class="socialLinkedin btn btn-outline-light btn-social" href="#"><i class="fab fa-linkedin-in"></i></a>
-<a class="socialPinterest btn btn-outline-light btn-social" href="#"><i class="fab fa-pinterest"></i></a>
+<a class="socialFacebook btn btn-outline-light btn-social" href="#">
+<i class="fab fa-facebook-f">
+</i>
+</a>
+<a class="socialInstagram btn btn-outline-light btn-social" href="#">
+<i class="fab fa-instagram">
+</i>
+</a>
+<a class="socialLinkedin btn btn-outline-light btn-social" href="#">
+<i class="fab fa-linkedin-in">
+</i>
+</a>
+<a class="socialPinterest btn btn-outline-light btn-social" href="#">
+<i class="fab fa-pinterest">
+</i>
+</a>
 </div>
 </div>
 <div class="col-lg-3 col-md-6">
-<h4 class="text-light mb-4">Opening Hours</h4>
-<h6 class="text-light">Monday - Sunday:</h6>
-<p class="mb-4">24 Hours</p>
-<p class="text-light">24x7 Emergency Service</p>
+<h4 class="text-light mb-4">
+       Opening Hours
+      </h4>
+<h6 class="text-light">
+       Monday - Sunday:
+      </h6>
+<p class="mb-4">
+       24 Hours
+      </p>
+<p class="text-light">
+       24x7 Emergency Service
+      </p>
 </div>
 <div class="col-lg-3 col-md-6" id="footer_service_links">
-<h4 class="text-light mb-4">Links</h4>
-<a class="btn btn-link" href="https://plumberwinchesterky.com/privacy-policy">Privacy Policy</a>
-<a class="btn btn-link" href="https://plumberwinchesterky.com/terms-and-conditions">Terms &amp; Conditions</a>
-<a class="btn btn-link" href="https://plumberwinchesterky.com/certifications">Certifications</a>
-<a class="btn btn-link" href="https://plumberwinchesterky.com/sitemap.xml">Sitemap</a>
+<h4 class="text-light mb-4">
+       Links
+      </h4>
+<a class="btn btn-link" href="https://plumberwinchesterky.com/privacy-policy">
+       Privacy Policy
+      </a>
+<a class="btn btn-link" href="https://plumberwinchesterky.com/terms-and-conditions">
+       Terms &amp; Conditions
+      </a>
+<a class="btn btn-link" href="https://plumberwinchesterky.com/certifications">
+       Certifications
+      </a>
+<a class="btn btn-link" href="https://plumberwinchesterky.com/sitemap.xml">
+       Sitemap
+      </a>
 </div>
 <div class="col-lg-3 col-md-6">
-<h4 class="text-light mb-4">Newsletter</h4>
-<p class="text-dark">Sign up to our Newsletter</p>
+<h4 class="text-light mb-4">
+       Newsletter
+      </h4>
+<p class="text-dark">
+       Sign up to our Newsletter
+      </p>
 <div class="position-relative mx-auto" style="max-width: 400px;">
 <input class="form-control border-0 w-100 py-3 ps-4 pe-5" placeholder="Your email" type="text"/>
-<button class="btn btn-primary py-2 position-absolute top-0 end-0 mt-2 me-2" type="button">SignUp</button>
+<button class="btn btn-primary py-2 position-absolute top-0 end-0 mt-2 me-2" type="button">
+        SignUp
+       </button>
 </div>
 </div>
 </div>
@@ -342,21 +559,31 @@
 <div class="copyright">
 <div class="row">
 <div class="col-md-6 text-center text-md-start mb-3 mb-md-0">
-                        © <a class="border-bottom" href="#" id="contact_footer_copyright">Plumber in Winchester, KY</a>,
-                        All Right Reserved.
-                    </div>
+       ©
+       <a class="border-bottom" href="#" id="footer_copyright">
+        Plumber in Winchester, KY
+       </a>
+       , All Right Reserved.
+      </div>
 </div>
 </div>
 </div>
 </div>
 <!-- Footer End -->
 <!-- Back to Top -->
-<a class="btn btn-lg btn-primary btn-lg-square rounded-0 back-to-top" href="#"><i class="bi bi-arrow-up"></i></a>
+<a class="btn btn-lg btn-primary btn-lg-square rounded-0 back-to-top" href="#">
+<i class="bi bi-arrow-up">
+</i>
+</a>
 <!-- JavaScript Libraries -->
-<script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
-<script defer="" src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0/dist/js/bootstrap.bundle.min.js"></script>
-<script src="lib/owlcarousel/owl.carousel.min.js"></script>
+<script src="https://code.jquery.com/jquery-3.4.1.min.js">
+</script>
+<script defer="" src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0/dist/js/bootstrap.bundle.min.js">
+</script>
+<script src="lib/owlcarousel/owl.carousel.min.js">
+</script>
 <!-- Template Javascript -->
-<script defer="" src="js/main.js"></script>
+<script defer="" src="js/main.js">
+</script>
 </body>
 </html>
